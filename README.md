@@ -34,3 +34,9 @@ pip install -r requirements.txt
 python app.py
 ```
 >Open your browser and navigate to `http://localhost:5000`
+
+## Some screenshots from the app
+![Landing Page](screenshots/landing_page.png)
+![Select Recipes](screenshots/selections.png)
+![Check recipes](screenshots/recipe.png)
+![Shopping list](screenshots/list.png)
