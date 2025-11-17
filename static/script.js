@@ -39,6 +39,10 @@ const shoppingList = document.getElementById('shopping-list');
 const exportListBtn = document.getElementById('export-list-btn');
 const restartBtn = document.getElementById('restart-btn');
 
+// Selected recipes section
+const selectedRecipesSection = document.getElementById('selected-recipes-section');
+const selectedRecipesList = document.getElementById('selected-recipes-list');
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
@@ -86,6 +90,7 @@ function goBackToStage(stageNumber) {
         state.requiredSoupServings = 0;
         state.requiredMainServings = 0;
         recipeSearch.value = '';
+        selectedRecipesSection.style.display = 'none';
     }
 
     // If going back to stage 2, refresh the recipe list with current selections
@@ -287,6 +292,7 @@ function toggleRecipeSelection(recipeName, recipeType, index) {
     // Update servings count
     updateServingsCount();
     updateProgress();
+    updateSelectedRecipesBox();
 }
 
 // Update Servings Count
@@ -347,6 +353,52 @@ function updateProgress() {
             finishPlanningBtn.disabled = true;
         }
     }
+}
+
+// Update Selected Recipes Box
+function updateSelectedRecipesBox() {
+    if (state.selectedRecipes.length === 0) {
+        selectedRecipesSection.style.display = 'none';
+        return;
+    }
+
+    selectedRecipesSection.style.display = 'block';
+
+    selectedRecipesList.innerHTML = state.selectedRecipes.map((recipe, index) => `
+        <div class="selected-recipe-item">
+            <div class="selected-recipe-info">
+                <span class="selected-recipe-name">${recipe.name}</span>
+                <span class="selected-recipe-meta">${recipe.type} • ${recipe.servings} servings</span>
+            </div>
+            <button class="remove-recipe-btn" onclick="removeSelectedRecipe(${index})" title="Remove">×</button>
+        </div>
+    `).join('');
+}
+
+// Remove Selected Recipe
+function removeSelectedRecipe(index) {
+    const recipe = state.selectedRecipes[index];
+
+    // Find the recipe in the displayed list and update its button
+    const recipeCards = document.querySelectorAll('.recipe-card');
+    recipeCards.forEach((_card, cardIndex) => {
+        const recipeName = state.allRecipes[cardIndex]?.name;
+        if (recipeName === recipe.name) {
+            const selectBtn = document.getElementById(`select-btn-${cardIndex}`);
+            if (selectBtn) {
+                selectBtn.textContent = 'Select';
+                selectBtn.classList.remove('selected');
+            }
+        }
+    });
+
+    // Remove from state
+    state.selectedRecipes.splice(index, 1);
+
+    // Update UI
+    updateServingsCount();
+    updateProgress();
+    updateSelectedRecipesBox();
 }
 
 // Handle Search
@@ -451,8 +503,11 @@ function exportShoppingList() {
         markdownContent += '\n';
     });
 
-    // Try to use Web Share API (works on mobile)
-    if (navigator.share) {
+    // Check if mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile && navigator.share && navigator.canShare) {
+        // Try Web Share API on mobile devices
         navigator.share({
             title: 'Shopping List',
             text: markdownContent
@@ -461,7 +516,7 @@ function exportShoppingList() {
             downloadAsMarkdownFile(markdownContent);
         });
     } else {
-        // Fallback to download
+        // Direct download for desktop or if Web Share not supported
         downloadAsMarkdownFile(markdownContent);
     }
 }

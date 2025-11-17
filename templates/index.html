@@ -43,56 +43,75 @@
 
         <!-- STAGE 2: Recipe Selection -->
         <div id="stage-2" class="stage">
-            <div class="stage-content">
+            <div class="stage-content stage-content-with-sidebar">
                 <h1>Select Your Recipes</h1>
 
-                <!-- Component A: Search Box -->
-                <div class="search-container">
-                    <input type="text" id="recipe-search" placeholder="Search recipes..." class="search-input">
-                </div>
+                <div class="stage-layout">
+                    <!-- Main Content Area -->
+                    <div class="main-content">
+                        <!-- Component A: Search Box -->
+                        <div class="search-container">
+                            <input type="text" id="recipe-search" placeholder="Search recipes..." class="search-input">
+                        </div>
 
-                <!-- Component B: Progress Bar(s) -->
-                <div id="progress-container" class="progress-container">
-                    <!-- Single progress bar (for soup-only or main-only) -->
-                    <div id="single-progress" class="progress-wrapper">
-                        <div class="progress-info">
-                            <span id="progress-text">0 / 0 servings selected</span>
+                        <!-- Component C: Recipe List -->
+                        <div id="recipe-list" class="recipe-list">
+                            <!-- Recipes will be dynamically loaded here -->
                         </div>
-                        <div class="progress-bar">
-                            <div id="progress-fill" class="progress-fill"></div>
-                        </div>
-                    </div>
 
-                    <!-- Dual progress bars (for both soup and main) -->
-                    <div id="dual-progress" class="progress-wrapper" style="display: none;">
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span id="soup-progress-text">Soup: 0 / 0 servings</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div id="soup-progress-fill" class="progress-fill progress-fill-soup"></div>
-                            </div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span id="main-progress-text">Main: 0 / 0 servings</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div id="main-progress-fill" class="progress-fill progress-fill-main"></div>
-                            </div>
+                        <!-- Component D: Action Buttons -->
+                        <div class="action-buttons">
+                            <button id="back-to-stage1-btn" class="btn btn-secondary">Back</button>
+                            <button id="finish-planning-btn" class="btn btn-primary" disabled>Finish Planning</button>
                         </div>
                     </div>
-                </div>
 
-                <!-- Component C: Recipe List -->
-                <div id="recipe-list" class="recipe-list">
-                    <!-- Recipes will be dynamically loaded here -->
-                </div>
+                    <!-- Sidebar: Progress & Selected Recipes -->
+                    <aside class="sidebar">
+                        <div class="tracking-box">
+                            <!-- Component B: Progress Bar(s) -->
+                            <div id="progress-container" class="progress-container-sidebar">
+                                <!-- Single progress bar (for soup-only or main-only) -->
+                                <div id="single-progress" class="progress-wrapper">
+                                    <div class="progress-info">
+                                        <span id="progress-text">0 / 0 servings selected</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div id="progress-fill" class="progress-fill"></div>
+                                    </div>
+                                </div>
 
-                <!-- Component D: Action Buttons -->
-                <div class="action-buttons">
-                    <button id="back-to-stage1-btn" class="btn btn-secondary">Back</button>
-                    <button id="finish-planning-btn" class="btn btn-primary" disabled>Finish Planning</button>
+                                <!-- Dual progress bars (for both soup and main) -->
+                                <div id="dual-progress" class="progress-wrapper" style="display: none;">
+                                    <div class="progress-item">
+                                        <div class="progress-info">
+                                            <span id="soup-progress-text">Soup: 0 / 0 servings</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div id="soup-progress-fill" class="progress-fill progress-fill-soup"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-info">
+                                            <span id="main-progress-text">Main: 0 / 0 servings</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div id="main-progress-fill" class="progress-fill progress-fill-main"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Selected Recipes -->
+                            <div id="selected-recipes-section" style="display: none;">
+                                <div class="divider"></div>
+                                <h3 class="selected-recipes-title">Selected Recipes</h3>
+                                <div id="selected-recipes-list" class="selected-recipes-list">
+                                    <!-- Selected recipes will be shown here -->
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </div>

@@ -29,11 +29,11 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     min-height: 100vh;
-    padding: 2rem 1rem;
+    padding: 1.5rem 0.75rem;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -65,6 +65,47 @@ body {
     box-shadow: 0 4px 20px var(--shadow);
 }
 
+.stage-content-with-sidebar {
+    max-width: 1600px;
+}
+
+/* Stage Layout with Sidebar */
+.stage-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.main-content {
+    min-width: 0; /* Prevent grid overflow */
+}
+
+.sidebar {
+    position: sticky;
+    top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+/* Scrollbar styling for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
 /* Typography */
 h1 {
     color: var(--primary);
@@ -72,6 +113,11 @@ h1 {
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-align: center;
+}
+
+.stage-content-with-sidebar h1 {
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
 .subtitle {
@@ -213,12 +259,17 @@ label {
     background: var(--white);
 }
 
-/* Progress Bar */
-.progress-container {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
+/* Tracking Box (Sidebar) */
+.tracking-box {
     background: var(--primary-lighter);
+    border: 2px solid var(--primary-light);
     border-radius: 8px;
+    padding: 1.5rem;
+}
+
+/* Progress Bar in Sidebar */
+.progress-container-sidebar {
+    margin: 0;
 }
 
 .progress-wrapper {
@@ -452,6 +503,78 @@ label {
     color: var(--primary);
 }
 
+/* Divider in Tracking Box */
+.divider {
+    height: 1px;
+    background: var(--primary-light);
+    margin: 1.5rem 0;
+}
+
+/* Selected Recipes Section */
+#selected-recipes-section {
+    animation: slideDown 0.3s ease;
+}
+
+.selected-recipes-title {
+    color: var(--primary);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.selected-recipes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.selected-recipe-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    padding: 0.875rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.selected-recipe-item:hover {
+    box-shadow: 0 2px 8px var(--shadow);
+}
+
+.selected-recipe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.selected-recipe-name {
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.selected-recipe-meta {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.remove-recipe-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-lighter);
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.remove-recipe-btn:hover {
+    background: var(--primary-lighter);
+    color: var(--primary);
+}
+
 /* Shopping List */
 .shopping-list-controls {
     display: flex;
@@ -525,9 +648,16 @@ label {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .stage-layout {
+        grid-template-columns: 1fr 280px;
+        gap: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     body {
-        padding: 1rem;
+        padding: 0.75rem;
     }
 
     .stage-content {
@@ -536,6 +666,20 @@ label {
 
     h1 {
         font-size: 2rem;
+    }
+
+    .stage-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .stage-content-with-sidebar h1 {
+        text-align: center;
     }
 
     .recipe-header {

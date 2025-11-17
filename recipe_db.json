@@ -10,10 +10,21 @@
                 {"name": "Cebola Média", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
                 {"name": "Espinafres", "quantity": 200, "unit": "g", "alternatives": [], "category": "Vegetables"},
                 {"name": "Água", "quantity": "Até submergir os ingredientes na panela.", "unit": "olhómetro", "alternatives": [], "category": "Liquids"},
+                {"name": "Azeite", "quantity": 4, "unit": "colher de sopa", "alternatives": [], "category": "Oils"},
                 {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
             ],
-        "instructions": ["Passo 1", "Passo 2"],
-        "notes": ["Nota 1", "Nota 2"],
+        "instructions": [
+            "Descascar e cortar todos os vegetais, quanto mais finos, melhor.", 
+            "Ferver água suficiente para cobrir os vegetais na panela.", 
+            "Meter os vegetais na panela; juntar água até cobrir.", 
+            "Juntar o azeite quando a água começar a ferver novamente.", 
+            "Cozinhar até a cenoura estar mole.",
+            "Adicionar os espinafres e cozinhar por mais 5 minutos.",
+            "Retirar do lume e triturar e juntar sal a gosto."
+        ],
+        "notes": [
+            "Às vezes é preciso ir adicionando água durante a cozedura se evaporar demasiado."
+        ],
         "serves": 7,
         "tags": ["Cenoura", "Courgette", "Batata", "Cebola", "Espinafres", "Sopa"]
     },
@@ -28,10 +39,21 @@
                 {"name": "Cebola Média", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
                 {"name": "Agrião", "quantity": 200, "unit": "g", "alternatives": [], "category": "Vegetables"},
                 {"name": "Água", "quantity": "Até submergir os ingredientes na panela.", "unit": "olhómetro", "alternatives": [], "category": "Liquids"},
+                {"name": "Azeite", "quantity": 4, "unit": "colher de sopa", "alternatives": [], "category": "Oils"},
                 {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
             ],
-        "instructions": ["Passo 1", "Passo 2"],
-        "notes": ["Nota 1"],
+        "instructions": [
+            "Descascar e cortar todos os vegetais, quanto mais finos, melhor.", 
+            "Ferver água suficiente para cobrir os vegetais na panela.", 
+            "Meter os vegetais na panela; juntar água até cobrir.", 
+            "Juntar o azeite quando a água começar a ferver novamente.", 
+            "Cozinhar até a cenoura estar mole.",
+            "Adicionar o agrião e cozinhar por mais 5 minutos.",
+            "Retirar do lume e triturar e juntar sal a gosto."
+        ],
+        "notes": [
+            "Às vezes é preciso ir adicionando água durante a cozedura se evaporar demasiado."
+        ],
         "serves": 7,
         "tags": ["Cenoura", "Courgette", "Batata", "Cebola", "Agrião", "Sopa"]
     },
@@ -47,8 +69,20 @@
                 {"name": "Pimenta Preta", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pimenta"], "category": "Spices"},
                 {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
             ],
-        "instructions": ["Passo 1", "Passo 2", "Passo 3"],
-        "notes": [],
+        "instructions": [
+            "Partir os ovos e misturar com o queijo ralado; deixar de lado.",
+            "Cozinhar a massa em água a ferver com sal até ficar al dente; escorrer, reservando um pouco da água de cozedura.",
+            "Numa frigideira, cozinhar a pancetta até ficar crocante.",
+            "Adicionar a massa escorrida à frigideira com a pancetta; misturar bem.",
+            "Retirar a frigideira do lume e adicionar a mistura de ovos e queijo, mexendo rapidamente para evitar que os ovos cozam.",
+            "Se necessário, adicionar um pouco da água de cozedura reservada para obter uma textura cremosa.",
+            "Temperar com pimenta preta a gosto e servir."
+        ],
+        "notes": [
+            "Um bom truque para a água é pôr sal até ficar com gosto de água do mar.",
+            "Tecnicamente devia-se usar apenas as gemas dos ovos.",
+            "A água da cozedura é para ajudar a emulsificar o molho."
+        ],
         "serves": 1,
         "tags": ["Carbonara", "Massa", "Ovos", "Pancetta", "Queijo Parmesão", "Pimenta Preta", "Esparguete", "Penne", "Fetuccine", "Bacon", "Guanciale", "Pecorino", "Pimenta"]
     },
@@ -62,9 +96,16 @@
                 {"name": "Pancetta", "quantity": 50, "unit": "g", "alternatives": ["Bacon", "Guanciale"], "category": "Meat"},
                 {"name": "Queijo Parmesão", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pecorino"], "category": "Dairy"},
                 {"name": "Pimenta Preta", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pimenta"], "category": "Spices"},
+                {"name": "Azeite", "quantity": 4, "unit": "colher de sopa", "alternatives": ["Óleo de côco"], "category": "Oils"},
                 {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
             ],
-        "instructions": ["Passo 1", "Passo 2"],
+        "instructions": [
+            "Fritar os tomates cherry cortados ao meio numa frigideira até começarem a desfazer-se.",
+            "Cozinhar a massa em água a ferver com sal até ficar al dente.",
+            "Numa frigideira, cozinhar a pancetta até ficar crocante.",
+            "Adicionar a massa escorrida à frigideira com a pancetta; misturar bem.",
+            "Temperar com pimenta preta a gosto e servir."
+        ],
         "notes": [],
         "serves": 1,
         "tags": ["Amatriciana", "Massa", "Tomate Cherry", "Pancetta", "Queijo Parmesão", "Pimenta Preta", "Esparguete", "Penne", "Fetuccine", "Bacon", "Guanciale", "Pecorino", "Pimenta"]
