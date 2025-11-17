@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Sopa de Espinafres da Avó",
+        "type": "Soup",
+        "ingredients":
+            [
+                {"name": "Cenoura", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Courgette Grande", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Batata Média", "quantity": 3, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Cebola Média", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Espinafres", "quantity": 200, "unit": "g", "alternatives": [], "category": "Vegetables"},
+                {"name": "Água", "quantity": "Até submergir os ingredientes na panela.", "unit": "olhómetro", "alternatives": [], "category": "Liquids"},
+                {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
+            ],
+        "instructions": ["Passo 1", "Passo 2"],
+        "notes": ["Nota 1", "Nota 2"],
+        "serves": 7,
+        "tags": ["Cenoura", "Courgette", "Batata", "Cebola", "Espinafres", "Sopa"]
+    },
+    {
+        "name": "Sopa de Agrião da Avó por inferência do Zé",
+        "type": "Soup",
+        "ingredients":
+            [
+                {"name": "Cenoura", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Courgette Grande", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Batata Média", "quantity": 3, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Cebola Média", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Agrião", "quantity": 200, "unit": "g", "alternatives": [], "category": "Vegetables"},
+                {"name": "Água", "quantity": "Até submergir os ingredientes na panela.", "unit": "olhómetro", "alternatives": [], "category": "Liquids"},
+                {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
+            ],
+        "instructions": ["Passo 1", "Passo 2"],
+        "notes": ["Nota 1"],
+        "serves": 7,
+        "tags": ["Cenoura", "Courgette", "Batata", "Cebola", "Agrião", "Sopa"]
+    },
+    {
+        "name": "Carbonara",
+        "type": "Main",
+        "ingredients":
+            [
+                {"name": "Massa", "quantity": 100, "unit": "g", "alternatives": ["Esparguete", "Penne", "Fetuccine"], "category": "Foundation"},
+                {"name": "Ovos", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Foundation"},
+                {"name": "Pancetta", "quantity": 50, "unit": "g", "alternatives": ["Bacon", "Guanciale"], "category": "Meat"},
+                {"name": "Queijo Parmesão", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pecorino"], "category": "Dairy"},
+                {"name": "Pimenta Preta", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pimenta"], "category": "Spices"},
+                {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
+            ],
+        "instructions": ["Passo 1", "Passo 2", "Passo 3"],
+        "notes": [],
+        "serves": 1,
+        "tags": ["Carbonara", "Massa", "Ovos", "Pancetta", "Queijo Parmesão", "Pimenta Preta", "Esparguete", "Penne", "Fetuccine", "Bacon", "Guanciale", "Pecorino", "Pimenta"]
+    },
+    {
+        "name": "Amatriciana",
+        "type": "Main",
+        "ingredients":
+            [
+                {"name": "Massa", "quantity": 100, "unit": "g", "alternatives": ["Esparguete", "Penne", "Fetuccine"], "category": "Foundation"},
+                {"name": "Tomate Cherry", "quantity": 4, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
+                {"name": "Pancetta", "quantity": 50, "unit": "g", "alternatives": ["Bacon", "Guanciale"], "category": "Meat"},
+                {"name": "Queijo Parmesão", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pecorino"], "category": "Dairy"},
+                {"name": "Pimenta Preta", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pimenta"], "category": "Spices"},
+                {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
+            ],
+        "instructions": ["Passo 1", "Passo 2"],
+        "notes": [],
+        "serves": 1,
+        "tags": ["Amatriciana", "Massa", "Tomate Cherry", "Pancetta", "Queijo Parmesão", "Pimenta Preta", "Esparguete", "Penne", "Fetuccine", "Bacon", "Guanciale", "Pecorino", "Pimenta"]
+    }
+]
