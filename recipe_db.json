@@ -10,7 +10,7 @@
                 {"name": "Cebola Média", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
                 {"name": "Espinafres", "quantity": 200, "unit": "g", "alternatives": [], "category": "Vegetables"},
                 {"name": "Água", "quantity": "Até submergir os ingredientes na panela.", "unit": "olhómetro", "alternatives": [], "category": "Liquids"},
-                {"name": "Azeite", "quantity": 4, "unit": "colher de sopa", "alternatives": [], "category": "Oils"},
+                {"name": "Azeite", "quantity": 4, "unit": "colheres de sopa", "alternatives": [], "category": "Oils"},
                 {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
             ],
         "instructions": [
@@ -39,7 +39,7 @@
                 {"name": "Cebola Média", "quantity": 1, "unit": "unidade", "alternatives": [], "category": "Vegetables"},
                 {"name": "Agrião", "quantity": 200, "unit": "g", "alternatives": [], "category": "Vegetables"},
                 {"name": "Água", "quantity": "Até submergir os ingredientes na panela.", "unit": "olhómetro", "alternatives": [], "category": "Liquids"},
-                {"name": "Azeite", "quantity": 4, "unit": "colher de sopa", "alternatives": [], "category": "Oils"},
+                {"name": "Azeite", "quantity": 4, "unit": "colheres de sopa", "alternatives": [], "category": "Oils"},
                 {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
             ],
         "instructions": [
@@ -96,7 +96,7 @@
                 {"name": "Pancetta", "quantity": 50, "unit": "g", "alternatives": ["Bacon", "Guanciale"], "category": "Meat"},
                 {"name": "Queijo Parmesão", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pecorino"], "category": "Dairy"},
                 {"name": "Pimenta Preta", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Pimenta"], "category": "Spices"},
-                {"name": "Azeite", "quantity": 4, "unit": "colher de sopa", "alternatives": ["Óleo de côco"], "category": "Oils"},
+                {"name": "Azeite", "quantity": "q.b.", "unit": "olhómetro", "alternatives": ["Óleo de côco"], "category": "Oils"},
                 {"name": "Sal", "quantity": "q.b.", "unit": "olhómetro", "alternatives": [], "category": "Spices"}
             ],
         "instructions": [
