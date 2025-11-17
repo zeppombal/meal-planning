@@ -22,7 +22,7 @@ Add a recipe to `recipe_db.json` in the following format:
     "tags": ["Tag1", "Tag2"]
 }
 ```
->IMPORTANT: If an ingrediant doesn't have a specific quantity, set the unit to "olhómetro" and the quantity to "q.b.". This affects how the shopping list is generated.
+>IMPORTANT: If an ingredient doesn't have a specific quantity, set the unit to "olhómetro" and the quantity to "q.b.". This affects how the shopping list is generated.
 
 >When writing an ingredient name, check if it already exists in another recipe. If it does, copy the name exactly to ensure proper quantity aggregation in the shopping list.
 
